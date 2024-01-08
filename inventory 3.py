@@ -60,9 +60,9 @@ def view_cart():
     total_price = 0
     for item in cart:
         price = item["price"] * item["quantity"]  
-        print(f"- {item['name']} (Quantity: {item['quantity']}, Price: ${price:.2f})")
+        print(f"- {item['name']} (Quantity: {item['quantity']}, Price: {price:.2f})")
         total_price += price
-    print(f"Total Price: ${total_price:.2f}")
+    print(f"Total Price: {total_price:.2f}")
 def checkout():
     global cart
     if not cart:
